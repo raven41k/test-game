@@ -2,9 +2,9 @@ import { FC } from 'react';
 import ok from '../../img/ok.png';
 import './start-page.css';
 
-interface StartPageProps {
+type StartPageProps = {
   setMode(title: string): void;
-}
+};
 
 export const StartPage: FC<StartPageProps> = ({ setMode }) => (
   <div className="start-page">

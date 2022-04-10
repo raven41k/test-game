@@ -2,11 +2,11 @@ import { FC } from 'react';
 import './end-page.css';
 import ok from '../../img/ok.png';
 
-interface EndPageProps {
+type EndPageProps = {
   earned: string;
   onReset(): void;
   isWinner: boolean;
-}
+};
 
 export const EndPage: FC<EndPageProps> = ({ earned, onReset, isWinner }) => (
   <div className="start-page start-page--end">

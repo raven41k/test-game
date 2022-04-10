@@ -5,6 +5,11 @@ import { EndPage } from './components/end-page/EndPage';
 import stepsMoney from './stepsMoney.json';
 import questions from './questions.json';
 
+type Money = {
+  id: number;
+  amount: string;
+};
+
 const App: FC = () => {
   const [mode, setMode] = useState<string>('startPage');
   const [questionNumber, setQuestionNumber] = useState<number>(1);
@@ -15,13 +20,13 @@ const App: FC = () => {
     setEarned('$ 0');
   };
 
-  const data = JSON.parse(JSON.stringify(questions));
-  const isWinner = questionNumber > data.at(-1).id;
+  const questionsList = useMemo(() => JSON.parse(JSON.stringify(questions)), []);
   const moneyPyramid = useMemo(() => JSON.parse(JSON.stringify(stepsMoney)).reverse(), []);
+  const isWinner = questionNumber > questionsList.at(-1).id;
 
   useEffect(() => {
     if (questionNumber > 1) {
-      setEarned(moneyPyramid?.find((m: any) => m.id === questionNumber - 1).amount);
+      setEarned(moneyPyramid?.find((m: Money) => m.id === questionNumber - 1).amount);
     }
     if (isWinner) {
       setMode('end');
@@ -32,7 +37,7 @@ const App: FC = () => {
       {mode == 'startPage' && <StartPage setMode={setMode} />}
       {mode == 'game' && (
         <Game
-          data={data}
+          questionsList={questionsList}
           questionNumber={questionNumber}
           setQuestionNumber={setQuestionNumber}
           setMode={setMode}

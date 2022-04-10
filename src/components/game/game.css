@@ -20,14 +20,14 @@
     text-align: center;
     position: relative;
     display: grid;
-    grid-template-columns: 375px 375px;
-    grid-template-rows: 72px 72px;
+    grid-template-columns: repeat(2, 375px);
+    grid-template-rows: repeat(2, 72px);
     column-gap: 45px;
     row-gap: 30px;
 }
 .game-question__answers .line {
     position: absolute;
-    border-top: 1px solid #D0D0D8;
+    border-top: 1px solid var(--gray-color);
     border-bottom: none;
     top: 50%;
     margin-bottom: 0;
@@ -105,7 +105,7 @@
 }
 .game-question__answer.game-question__answer--border:before,
 .game-question__answer.game-question__answer--border:after {
-    border: 1px solid #D0D0D8;
+    border: 1px solid var(--gray-color);
 }
 
 .game-question__answer.game-question__answer--border:before {
@@ -136,7 +136,7 @@
 }
 /* old */
 .game-question__answer--money.old .game-money__amount {
-    color: #D0D0D8;
+    color: var(--gray-color);
 }
 /* wrong */
 .game-question__answer--border.wrong:before,
@@ -159,12 +159,15 @@
 .game-question__answer.game-question__answer--border:hover:after {
     border: 1px solid var(--orange-color);
 }
+.game-money__list .game-question__answer.game-question__answer--money:hover .line {
+    border-top: 1px solid var(--gray-color);
+}
 .game-question__answer.game-question__answer--border:hover .line {
     border-top: 1px solid var(--orange-color);
 }
 .game-question__answer.game-question__answer--money:hover:before,
 .game-question__answer.game-question__answer--money:hover:after {
-    border: 1px solid #D0D0D8;
+    border: 1px solid var(--gray-color);
 }
 
 .game-money {
@@ -182,7 +185,7 @@
 }
 .game-money__list .line {
     position: absolute;
-    border-top: 1px solid #D0D0D8;
+    border-top: 1px solid var(--gray-color);
     top: 50%;
     margin-top: -0.5px;
     width: 100%;
@@ -206,8 +209,8 @@
         padding: 0 30px;
     }
     .game-question__answers {
-        grid-template-columns: 290px 290px;
-        grid-template-rows: 56px 56px;
+        grid-template-columns: repeat(2, 290px);
+        grid-template-rows: repeat(2, 56px);
         row-gap: 8px;
     }
     .game-money {
