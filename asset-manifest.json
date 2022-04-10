@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/test-game/static/css/main.e6b7386a.css",
+    "main.js": "/test-game/static/js/main.d92ffb64.js",
+    "static/media/ok.png": "/test-game/static/media/ok.7e02f3f6f67ad443ebb5.png",
+    "index.html": "/test-game/index.html",
+    "static/media/Close.svg": "/test-game/static/media/Close.7d6c8116e5258f4a9b98.svg",
+    "static/media/Menu.svg": "/test-game/static/media/Menu.bba9fd6c60e8840800cd.svg",
+    "main.e6b7386a.css.map": "/test-game/static/css/main.e6b7386a.css.map",
+    "main.d92ffb64.js.map": "/test-game/static/js/main.d92ffb64.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6b7386a.css",
+    "static/js/main.d92ffb64.js"
+  ]
+}
