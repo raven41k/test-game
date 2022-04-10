@@ -1,0 +1,22 @@
+.start-page--end {
+    background: #E5E5E5;
+}
+.start-page--end .right-block__total {
+    font-size: 32px;
+    font-weight: 600;
+    opacity: 0.5;
+}
+.start-page--end .right-block__btn {
+    margin-top: 60px;
+}
+.start-page--end .right-block__title {
+    white-space: nowrap;
+}
+@media (max-width: 767px) {
+    .start-page--end .right-block__total {
+        font-size: 18px;
+    }
+    .start-page--end .right-block__total {
+        margin-top: 50px;
+    }
+}
