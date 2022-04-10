@@ -5,15 +5,19 @@
 :root {
   --orange-color: #FF8B37;
 }
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
 
-html,
 body {
   margin: 0;
   font-family: 'Inter',
   sans-serif;
-  font-size: 14px;
   color: #1C1C21;
   overflow-x: hidden;
+  min-width: 320px;
 }
 
 a {
@@ -38,6 +42,50 @@ li {
   list-style: none;
 }
 
-#root {
-  height: 100vh;
+.app {
+  min-height: 100vh;
+}
+
+@keyframes correct {
+
+  0%,
+  22%,
+  42% {
+    background: #f2faf4;
+  }
+
+  20%,
+  40%,
+  60% {
+    border: 1px solid #47D867;
+    background: #87f79f;
+  }
+
+  62%,
+  100% {
+    background: #E6FAEA;
+    border: 1px solid #47D867;
+  }
+}
+
+@keyframes wrong {
+
+  0%,
+  22%,
+  42% {
+    background: #f8f3f3;
+  }
+
+  20%,
+  40%,
+  60% {
+    background: #fdc6c2;
+    border: 1px solid #EC6259;
+  }
+
+  62%,
+  100% {
+    background: #FDEEED;
+    border: 1px solid #EC6259;
+  }
 }
