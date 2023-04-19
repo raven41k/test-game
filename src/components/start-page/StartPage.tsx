@@ -12,7 +12,7 @@ export const StartPage: FC<StartPageProps> = ({ setMode }) => (
       <img src={ok} alt="ok" />
     </div>
     <div className="right-block">
-      <h2 className="right-block__title">Who wants to be a millionaire?</h2>
+      <h2 className="right-block__title">Опросник деливери</h2>
       <button className="right-block__btn" onClick={() => setMode('game')}>
         Start
       </button>

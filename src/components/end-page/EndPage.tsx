@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import './end-page.css';
-import ok from '../../img/ok.png';
+import ok from '../../img/end.png';
 
 type EndPageProps = {
   earned: string;
@@ -14,11 +14,11 @@ export const EndPage: FC<EndPageProps> = ({ earned, onReset, isWinner }) => (
       <img src={ok} alt="ok" />
     </div>
     <div className="right-block">
-      {isWinner && <div className="right-block__title">You are winner!</div>}
+      {isWinner && <div className="right-block__title">Ты молодец!</div>}
       <div className="right-block__total">Total score:</div>
       <div className="right-block__title">{earned} earned</div>
       <button className="right-block__btn" onClick={() => onReset()}>
-        Try again
+        Понравилось? Попробуй еще разок
       </button>
     </div>
   </div>
